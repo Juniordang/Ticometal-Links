@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+:root {
+    font-size: 62.5%;
+    --font-primary: 'DM sans', Arial, Helvetica, sans-serif;
+    --font-secondary: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    --green: #005654;
+    --orange: #F16A21;
+    --white: #fff;
+    
+}
+body {
+    font-size: 1.6rem;
+    font-family: var(--font-primary);
+    width: 100%;
+    background: var(--green);
+}
+button:hover {
+    cursor: pointer;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+/* animações */
+@keyframes shake {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.s-header {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.c-logo img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    margin-bottom: 1.5rem;
+}
+.c-header__text .c-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+#s-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+#c-boxLinks {
+    width: 70vw;
+    display: grid;
+    row-gap: 2rem;
+}
+li > a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 1rem 2rem;
+    background: var(--white);
+    border-bottom: .6rem solid #011414;
+    border-radius: 1.3rem;
+    color: black;
+    font-family: var(--font-secondary);
+    transition: border-color .5s linear;
+}
+li > a:hover {
+    border-color: #032b2b;
+    animation: shake .5s linear 2;
+}
+a > ion-icon {
+    font-size: 1.9rem;
+}
+a > span {
+    width: 13.9rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-self: center;
+}
+.u-whats:hover {
+   background-color: var(--orange);
+}
+footer {
+    padding: 1rem 3rem 6rem;
+    font-family: var(--font-secondary);
+    text-align: center;
+}
+
+/* media queries */
+@media screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+        padding: 6rem 0 0;
+    }
+    .c-header__text .c-title {
+        font-size: 3rem;
+        width: 63rem;
+        margin: 0 auto;
+    }
+    .c-header__text p {
+        font-size: 1.8rem;
+    }
+    #c-boxLinks {
+        width: 65rem;
+    }
+    li > a {
+        padding-left: 2rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    #c-boxLinks {
+        width: 80rem;
+        
+    }
+    a > span {
+        width: 15rem;
+        font-size: 1.6rem;
+    }
+    a > ion-icon {
+        font-size: 2.2rem;
+    }
+}
